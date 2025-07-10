@@ -1,0 +1,72 @@
+# IntroCS - Taksk #1
+
+# The program below uses the turtle module to my intials 
+
+# import turtle module
+import turtle
+
+# create junior the turtle
+junior  = turtle.Turtle()
+
+junior.penup()
+junior.goto(-150,0)
+junior.pendown()
+
+# junior creating a letter G
+junior.fillcolor("purple")
+junior.begin_fill()
+junior.forward(100)
+junior.right(90)
+junior.forward(125)
+junior.right(90)
+junior.forward(200)
+junior.right(90)
+junior.forward(250)
+junior.right(90)
+junior.forward(200)
+junior.right(90)
+junior.forward(30)
+junior.right(90)
+junior.forward(170)
+junior.left(90)
+junior.forward(190)
+junior.left(90)
+junior.forward(150)
+junior.left(90)
+junior.forward(75)
+junior.left(90)
+junior.forward(80)
+junior.right(90)
+junior.forward(20)
+junior.end_fill()
+
+# junior creating a letter H
+junior.penup()
+junior.goto(25,-125)
+junior.pendown()
+junior.fillcolor("black")
+junior.begin_fill()
+junior.forward(250)
+junior.right(90)
+junior.forward(30)
+junior.right(90)
+junior.forward(125)
+junior.left(90)
+junior.forward(100)
+junior.left(90)
+junior.forward(125)
+junior.right(90)
+junior.forward(30)
+junior.right(90)
+junior.forward(250)
+junior.right(90)
+junior.forward(30)
+junior.right(90)
+junior.forward(95)
+junior.left(90)
+junior.forward(100)
+junior.left(90)
+junior.forward(95)
+junior.right(90)
+junior.forward(30)
+junior.end_fill()
