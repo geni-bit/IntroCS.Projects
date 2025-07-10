@@ -28,9 +28,9 @@ b = 7
 c = 6.5
 
 # Question 3: Assign to variables first, middle and last the strings for your first, middle, and last names
-first = ("Genesis ")
-middle = ("Joanna ")
-last = ("Hernandez ")
+first = ("Jane")
+middle = ("A")
+last = ("Doe")
 
 # Question 4: Assign to variable fullname the result of concatenating string variables first, middle, and last
 fullname = (first + middle +  last)
