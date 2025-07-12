@@ -1,47 +1,55 @@
-#improting the random function 
-import random
+def current_age():
+    """ The function current age  prompts the user to enter their birthday in the format mm/dd/yyyy,
+    and computes and returns their age as of the start date for this project, 10/17/2024."""
 
-def RPS_game():
-    """The function RPS game is a program that simulates a round of rock-paper-scissors,
-    with the user playing against the computer""" 
-    #the computer will choose an option at random from the following choices of rock, paper, and scissors
-    comp_choice = random.choice(["rock", "paper", "scissors"])
-    #the player to choice an option from following choices of rock, paper, and scissors
-    player_choice = input("Choose rock, paper, or scissors: ")
-    #To make sure the player is choosing from the following options and not something else
-    if not (is_legal(player_choice)):
-        print("You must select from rock, paper, or scissors")
-    else:
-        #printing out the computer's choice 
-        print("The computer chose", comp_choice)
-        #if the player's choice beats the computer's choice, then it will print out, "You win" to the player
-        if beats(player_choice, comp_choice):
-            print("You win!")
-        #if the computer's choice beats the player's choice, then it will print out, "You lost" to the player
-        elif beats(comp_choice, player_choice):
-            print("You lost. :(")
-        #anything else happens besides the other if statements above
-        #the the computer's amd the player's choices are the same, then it will print out, "It's a tie" to the player
-        else:
-            print("It's a tie.")
+    #user input for thier date of birth in mm/dd/yyyy:
+    birth_date = input("Enter your bday in the form mm/dd/yyyy: ")
 
-def is_legal(choice:str) -> bool:
-    """The function (is_legal) is to check if weapons chosen by the
-    user and computer are either “rock”, “paper”, or “scissors"""
-    #if the player choices from either rock, paper, or scissors, then it will return true 
-    if choice == "rock" or choice == "paper" or choice == "scissors":
-        return True
-    #if the player doesn't choice from any of the choices, then it will return False 
-    else:
-        return False
+    #spliting the str from the user birthday by flashfoward 
+    birthday_list = birth_date.split("/")
+
+    #variable for the the current year 
+    current_year = 2024
+
+    #variable for the  current month 
+    curent_month = 10
+
+    #variable for the the current day 
+    current_day = 17
+
+    #variable for the user birth month at the postion 0 of birth list
+    birth_month = birthday_list[0]
+
+    #variable for the user birth day at the postion 1 of birth list
+    birth_day = birthday_list[1]
     
-def beats(weapon1:str,weapon2:str) -> bool:
-    """The function (beats) takes in  the weapons from two players and determines if the weapon
-    chosen by the first players beats the weapon chosen by the second player."""
-    #Checking each of the player and computer weapons if they one these three outcomes, the it will return True 
-    if (weapon1 == "rock" and weapon2 == "scissors") or (weapon1 == "paper" and weapon2 == "rock") or (weapon1 == "scissors" and weapon2 == "paper"):
-        return True
-    #if anything else, the player and computer choices doesn't match any of the options then it will return False 
+    #variable for the user birth year at the postion 2 of birth list
+    birth_year = birthday_list[2]
+    
+    #variable formula to determine user's age by subtracting current year by their birth year
+    age = current_year - int(birth_year)
+    
+    #if the user's birthdate has passed than current date then it will return with the user's age 
+    if int(birth_month) < curent_month:
+        return age
+    
+    #if the user's hasn't passed yet than current date then it will return with the user's age subtracted by 1
+    elif int(birth_month) > curent_month:
+        return age - 1
+    
+    #if the user's birthday is on current date despite the birth year then it will print Happy birthday to the user and return with the user's age
+    elif int(birth_month) == curent_month and int(birth_day) == current_day:
+         print("Happy Birthday")
+         return age
+        
+    #else birthday doesn't fit in the other situations then it will return with the user's age - 1
     else:
-        return False
+        return age - 1
+        
+
+
+
+
+
+
 
